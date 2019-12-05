@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Mac from './components/Mac';
-import Ipad from './components/IPad';
+import IPad from './components/IPad';
 import IPhone from './components/IPhone';
 import Watch from './components/Watch';
 import TV from './components/TV';
@@ -17,18 +17,26 @@ function App() {
     <div className="App">
       <nav>
         <Link to='/'><i class="fab fa-apple"></i></Link>
-        <Link to=''>Mac</Link>
-        <Link to=''>iPad</Link>
-        <Link to=''>iPhone</Link>
-        <Link to=''>Watch</Link>
-        <Link to=''>TV</Link>
-        <Link to=''>Music</Link>
-        <Link to=''>Support</Link>
-        <Link to=''><i class="far fa-search"></i></Link>
-        <Link to=''><i class="far fa-shopping-bag"></i></Link>
+        <Link to='/mac'>Mac</Link>
+        <Link to='/ipad'>iPad</Link>
+        <Link to='/iphone'>iPhone</Link>
+        <Link to='/watch'>Watch</Link>
+        <Link to='/tv'>TV</Link>
+        <Link to='/music'>Music</Link>
+        <Link to='/support'>Support</Link>
+        <Link to='/search'><i class="far fa-search"></i></Link>
+        <Link to='/shop'><i class="far fa-shopping-bag"></i></Link>
       </nav>
       <Route exact path='/' component={Home} />
-
+      <Route path='/mac' component={Mac} />
+      <Route path='/ipad' component={IPad} />
+      <Route path='/iphone' component={IPhone} />
+      <Route path='/watch' component={Watch} />
+      <Route path='/tv' component={TV} />
+      <Route path='/music' component={Music} />
+      <Route path='/support' component={Support} />
+      <Route path='/search' component={Search} />
+      <Route path='/shop' component={Shop} />
     </div>
   );
 }
