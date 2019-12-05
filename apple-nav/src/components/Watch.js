@@ -1,4 +1,5 @@
 import React from "react";
+import './component.css';
 
 function Watch(props) {
   return (
